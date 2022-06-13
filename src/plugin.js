@@ -1,8 +1,10 @@
-const CSSOM = require('cssom')
+import CSSOM from 'cssom'
+import {h} from 'vue'
+
 
 const SimpleSVG = {
-  render (createElement) {
-    return createElement('svg')
+  render () {
+    return h('svg')
   },
   name: 'simple-svg',
   props: {
@@ -151,8 +153,8 @@ const SimpleSVG = {
 }
 
 const plugin = {
-  install (Vue, options) {
-    Vue.component('simple-svg', SimpleSVG)
+  install (app, options) {
+    app.component('simple-svg', SimpleSVG)
   }
 }
 

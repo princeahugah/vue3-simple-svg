@@ -1,12 +1,9 @@
-import Vue from 'vue'
-import App from './App'
+import { createApp } from 'vue'
 
 // import VueSimpleSVG from '../dist/plugin.js'
 import VueSimpleSVG from '../src/plugin.js'
-Vue.use(VueSimpleSVG)
+import App from "./App"
+import './index.css'
 
-new Vue({
-  el: '#app',
-  template: '<App/>',
-  components: { App }
-})
+
+createApp(App).use(VueSimpleSVG).mount('#app')

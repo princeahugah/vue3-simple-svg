@@ -9,7 +9,8 @@ module.exports = {
 
     // Paths
     /* --changed-- */
-    assetsSubDirectory: 'static',
+    assetsSubDirectory: '.',
+    assetsRoot: path.resolve(__dirname, '..'),
     assetsPublicPath: '/demo', // /
     proxyTable: {},
 
@@ -52,12 +53,12 @@ module.exports = {
   build: {
     // Template for index.html
     /* --changed-- */
-    index: path.resolve(__dirname, '../demo/template.html'), // ../dist/index.html
+    index: path.resolve(__dirname, '../dist/template.html'), // ../dist/index.html
 
     // Paths
     /* --changed-- */
-    assetsRoot: path.resolve(__dirname, '../demo/dist'), // /dist
-    assetsSubDirectory: 'static',
+    assetsRoot: path.resolve(__dirname, '../dist'), // /dist
+    assetsSubDirectory: '.',
     assetsPublicPath: '/demo', // /
 
     /**
@@ -66,7 +67,7 @@ module.exports = {
 
     productionSourceMap: true,
     // https://webpack.js.org/configuration/devtool/#production
-    devtool: '#source-map',
+    devtool: 'source-map',
 
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.

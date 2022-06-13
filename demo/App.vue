@@ -2,7 +2,7 @@
   <div id="app">
     <div class="container">
       <SvgButton
-        :svg-src="'/demo/assets/' + filename"
+        :svg-src="require('./assets/' + filename)"
       />
       <ChangeSrcButton
         class="margin-top-20"
@@ -15,7 +15,6 @@
 <script>
 import SvgButton from './components/SvgButton'
 import ChangeSrcButton from './components/ChangeSrcButton'
-require('reset.css')
 const svgFiles = ['ufo.svg', 'dinosaur.svg', 'robot.svg']
 
 export default {

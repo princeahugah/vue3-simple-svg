@@ -1,5 +1,5 @@
-import babel from 'rollup-plugin-babel'
-import uglify from 'rollup-plugin-uglify'
+import { babel } from '@rollup/plugin-babel';
+import { uglify } from 'rollup-plugin-uglify'
 
 export default {
   input: 'src/plugin.js',
@@ -10,7 +10,7 @@ export default {
   plugins: [
     babel({
       babelrc: false,
-      presets: ["es2015-rollup"]
+      presets: ['@babel/preset-env']
     }),
     uglify()
   ]
