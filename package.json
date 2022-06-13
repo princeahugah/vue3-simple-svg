@@ -1,6 +1,6 @@
 {
-  "name": "vue-simple-svg",
-  "version": "2.0.2",
+  "name": "vue3-simple-svg",
+  "version": "1.0.0",
   "description": "A simple Vue.js plugin that allows you to use a component that loads a SVG image as an inline SVG so you can easily control its fill color from the parent component.",
   "main": "dist/plugin.js",
   "scripts": {
@@ -11,15 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/seiyable/vue-simple-svg.git"
+    "url": "https://github.com/princeahugah/vue3-simple-svg.git"
   },
   "keywords": [
     "vue svg",
+    "vue3 svg",
     "vuejs svg",
     "vue.js svg",
     "vue inline svg"
   ],
-  "author": "Seiya Kobayashi",
+  "author": "Prince Ahugah",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.18.2",
