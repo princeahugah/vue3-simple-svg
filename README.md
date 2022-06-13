@@ -1,4 +1,4 @@
-# vue-simple-svg (V2)
+# vue-simple-svg (V3)
 A simple Vue.js plugin that allows you to use a component that dynamically loads a .svg file as an inline SVG so you can easily control its style programmatically. No jQuery required.   
 
 I recommend using [vue-svg-loader](https://www.npmjs.com/package/vue-svg-loader) for many cases when you just need to load a SVG file as a component. This plugin is built to cover some other cases the library doesn't fit, which are:
@@ -7,19 +7,28 @@ I recommend using [vue-svg-loader](https://www.npmjs.com/package/vue-svg-loader)
 
 ### Installation:
 ```sh
-$ npm install vue-simple-svg
+$ npm install vue3-simple-svg
+```
+
+or
+
+```
+$ yarn add vue3-simple-svg
 ```
 
 ### Usage:
 1. initialize in your main file,
 ```javascript
+import { createApp } from 'vue'
 // as a plugin
-import VueSimpleSVG from 'vue-simple-svg'
-Vue.use(VueSimpleSVG)
+import VueSimpleSVG from 'vue3-simple-svg'
+
+createApp({}).use(VueSimpleSVG).mount('#app')
+
 
 // or as a component
-import {SimpleSVG} from 'vue-simple-svg'
-Vue.component('simple-svg', SimpleSVG)
+import {SimpleSVG} from 'vue3-simple-svg'
+app.component('simple-svg', SimpleSVG)
 ```
 
 2. specify which elements in the SVG will be manipulated their fill and stroke colors by setting dedicated class names to them
@@ -81,3 +90,6 @@ You can see the example of how to use simple-svg component at demo/components/Sv
 ### Reference:
 - Loading a SVG with XMLHttpRequest and DOMParser https://github.com/jonnyhaynes/inline-svg
 - Parsing inline svg tags https://github.com/MMF-FE/vue-svgicon
+
+### Credits
+Thanks to [Seiya Kobayashi](https://github.com/seiyable) for the vue 2 version. Salute! 
